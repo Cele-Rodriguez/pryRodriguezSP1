@@ -28,13 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnLeer = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.txtDatos = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(25, 195);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Crear archivo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnLeer
+            // 
+            this.btnLeer.Location = new System.Drawing.Point(198, 195);
+            this.btnLeer.Name = "btnLeer";
+            this.btnLeer.Size = new System.Drawing.Size(115, 32);
+            this.btnLeer.TabIndex = 1;
+            this.btnLeer.Text = "Leer";
+            this.btnLeer.UseVisualStyleBackColor = true;
+            this.btnLeer.Click += new System.EventHandler(this.btnLeer_Click);
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Location = new System.Drawing.Point(171, 140);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(142, 32);
+            this.btnGrabar.TabIndex = 2;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
+            // 
+            // txtDatos
+            // 
+            this.txtDatos.Location = new System.Drawing.Point(45, 25);
+            this.txtDatos.Multiline = true;
+            this.txtDatos.Name = "txtDatos";
+            this.txtDatos.Size = new System.Drawing.Size(204, 96);
+            this.txtDatos.TabIndex = 3;
+            // 
+            // frmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(332, 256);
+            this.Controls.Add(this.txtDatos);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.btnLeer);
+            this.Controls.Add(this.button1);
+            this.Name = "frmMain";
+            this.Text = "Manejo de archivos y carpetas";
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLeer;
+        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.TextBox txtDatos;
     }
 }
 
