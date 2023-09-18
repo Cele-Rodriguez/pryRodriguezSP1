@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryRodriguezSP1
 {
@@ -17,6 +18,7 @@ namespace pryRodriguezSP1
         public frmMain()
         {
             InitializeComponent();
+
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -26,8 +28,8 @@ namespace pryRodriguezSP1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-           
+
+
             try
             {
                 StreamWriter swCrearArchivo = new StreamWriter("MiArchivito", false);
@@ -64,12 +66,20 @@ namespace pryRodriguezSP1
             StreamReader srManejoArchivo = new StreamReader("miArchivito");
 
 
-            while (srManejoArchivo.EndOfStream==false)
+            while (srManejoArchivo.EndOfStream == false)
             {
                 txtDatos.Text += srManejoArchivo.ReadLine() + Environment.NewLine;
             }
 
             srManejoArchivo.Close();
+
         }
     }
 }
+
+
+        
+    
+
+
+   
